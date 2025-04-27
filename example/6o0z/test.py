@@ -1,5 +1,5 @@
 from PDBPrepper import PDBPrepper
 
-prepper = PDBPrepper("7rpz.pdb")
+prepper = PDBPrepper("6o0z.pdb")
 prepper.run()
 

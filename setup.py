@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name='PDBPrepper',
-    version='0.1.0',
+    version='0.2.0',
     packages=find_packages(),
     author="Abhishek Kognole",
     author_email="aakognole@gmail.com",
@@ -20,11 +20,8 @@ setup(
         'pdbfixer',
         'openmm',
     ],
-    entry_points={
-        'console_scripts': [
-            'pdbprepper=pdbprepper.core:main',
-        ],
-    },
-    python_requires=">=3.6",
+    python_requires=">=3.7",
     zip_safe=False,
+    package_data={"PDBPrepper.data": ["*.dat"]},
+    include_package_data=True,
 )
