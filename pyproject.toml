@@ -1,3 +1,39 @@
 [build-system]
-requires = ["setuptools>=42"]
+requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
+
+[project]
+name = "PDBPrepper"
+version = "0.2.0"
+description = "Simple program to quickly prepare PDB"
+readme = "README.md"
+requires-python = ">=3.7"
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+authors = [
+    {name = "Abhishek Kognole", email = "aakognole@gmail.com"}
+]
+keywords = ["PDB", "PDBFixer", "OpenMM", "protein", "preparation", "pdbprepper"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+
+dependencies = [
+    "pdbfixer",
+    "openmm",
+]
+
+[project.urls]
+Homepage = "https://github.com/aakognole/pdbprepper"
+Issues = "https://github.com/aakognole/pdbprepper/issues"
+
+[project.scripts]
+pdbprepper = "PDBPrepper.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["PDBPrepper*"]
+
+[tool.setuptools.package-data]
+"PDBPrepper.data" = ["*.dat"]
